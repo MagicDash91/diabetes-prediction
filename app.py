@@ -2,6 +2,8 @@ import streamlit as st
 import pandas as pd
 import numpy as np
 
+st.header('Diabetes Prediction Using Random Forest Classifier')
+
 df = pd.read_csv("diabetes.csv")
 df_copy = df.copy(deep = True) #deep = True -> Buat salinan indeks dan data dalam dataframe
 df_copy[['Glucose','BloodPressure','SkinThickness','Insulin','BMI']] = df_copy[['Glucose','BloodPressure','SkinThickness','Insulin','BMI']].replace(0,np.NaN)
