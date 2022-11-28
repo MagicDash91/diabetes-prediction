@@ -55,7 +55,8 @@ Xnew3 = [[preg,gluc,blood,skin,insulin,bmi,diabet,age]]
 y_pred_prob4 = clf.predict_proba(Xnew3)
 y_pred_prob_df4 = pd.DataFrame(data=y_pred_prob4, columns=['Prob of dont have diabetes', 'Prob of have diabetes'])
 hasil = (y_pred_prob_df4)*100
-st.write("Result")
-st.dataframe(hasil)
-st.write("Bar Chart Result")
-st.bar_chart(hasil)
+hasil2 = hasil.astype(int)
+st.write("Result (Probability in Percantage)")
+st.dataframe(hasil2)
+st.write("Bar Chart Result (Probability in Percantage)")
+st.bar_chart(hasil2)
