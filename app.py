@@ -38,7 +38,7 @@ X_train, X_test, y_train, y_test = train_test_split(X,y, test_size=0.1, random_s
 
 from sklearn.ensemble import RandomForestClassifier
 
-clf = RandomForestClassifier(random_state=0) #Mengontrol keacakan estimator agar hasil yang didapatkan selalu tetap
+clf = RandomForestClassifier(random_state=0, max_depth=3) #Mengontrol keacakan estimator agar hasil yang didapatkan selalu tetap
 clf.fit(X_train, y_train)
 
 preg = st.number_input('Pregnancies')
